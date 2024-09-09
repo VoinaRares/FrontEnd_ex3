@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <label for="authorDropDown">Author</label>
+    <select name="authorDropDown" id="authorDropDown" onchange="filterPosts(value)">
+        <option value=""></option>
+    </select>
+    <div id="container">
+        <div class="post">
+            <img alt="image">
+            <h3> Author </h3>
+            <p> Body </p>
+        </div>
+    </div>
+
+
+    <script src="scripts/homePage.js"></script>
+</body>
+</html>
