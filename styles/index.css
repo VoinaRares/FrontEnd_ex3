@@ -1,27 +1,43 @@
 body{
-    background-color: grey;
+    background-color: rgb(223, 222, 222);
 }
 
-
-#container{
-    background-color: whitesmoke;
-    display: flex;
-    width: 60%;
+#mainPage{
     margin-left: auto;
     margin-right: auto;
+    width: 70%;
+}
+
+#container{
+    background-color: rgb(245, 245, 245);
+    display: flex;
     padding: 30px;
     flex-wrap: wrap;
     gap: 20px;
+    width: 100%;
+    justify-content: space-evenly;
+    border-radius: 4px;
 }
 
 .post{
     display: block;
-    border: 1px solid grey;
+    border: 1px solid rgb(223, 222, 222);
     border-radius: 4px;
-    padding: 5px;
+    padding: 20px;
     margin: 3px;
     height: 170px;
     width: 200px;
+}
+
+.post h3{
+    padding: 3px 0px;
+    margin-bottom: 0px;
+}
+
+.post p{
+    margin-top: 5px;
+    font-size: small;
+    color: grey;
 }
 
 .post img{
@@ -31,8 +47,13 @@ body{
 
 label{
     display: block;
+
 }
 
-#author{
-    width: 70px;
+
+
+#authorDropDown{
+    width: auto;
+    margin-bottom: 20px;
+    border-radius: 4px;
 }
