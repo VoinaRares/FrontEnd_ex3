@@ -8,18 +8,21 @@
 </head>
 <body>
     <div id="mainPage">
-    <label for="authorDropDown">Author</label>
-    <select name="authorDropDown" id="authorDropDown" onchange="filterPosts(value)">
-        <option value=""></option>
-    </select>
-    <div id="container">
-        <div class="post">
-            <img alt="image">
-            <h3> Author </h3>
-            <p> Body </p>
+        <label for="authorDropDown">Author</label>
+        <select name="authorDropDown" id="authorDropDown">
+            <option value=""></option>
+        </select>
+        <div id="container">
+        
         </div>
     </div>
-    </div>
+    <template id="postTemplate">
+        <div class="post">
+            <img class="image" alt="image">
+            <h3 class="author"> Author </h3>
+            <p> Body </p>
+        </div>
+    </template>
 
     <script src="scripts/homePage.js"></script>
 </body>
