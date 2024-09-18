@@ -3,9 +3,23 @@ const POSTS_PER_PAGE = 6;
 
 
 async function fetchImages(url) {
-    const response =  await fetch(url);
-    const posts = response.json();
-    return posts;
+    let resposne;
+    try{
+        resposne = await fetch(url);
+    }catch(e){
+        console.log('Error: ', e);
+    }
+
+    if(resposne.ok == true){
+        try{
+            return resposne.json();
+        }catch(e){
+            console.error('Unable to parse JSON');
+        }
+    }
+    else{
+        return [];
+    }
 }
 
 
@@ -14,10 +28,6 @@ async function showAllPosts(author, pageNumber){
     const dataUnsliced = (await fetchImages(API_URL)).filter(item => ((item.author == author) || (author =="")));
     const container = document.getElementById("container");
     const initialPost = document.getElementById("postTemplate");
-
-    console.log(pageNumber);
-    console.log(dataUnsliced.length);
-    console.log(dataUnsliced.length / POSTS_PER_PAGE)
 
     if(pageNumber > Math.round(dataUnsliced.length / POSTS_PER_PAGE) && pageNumber != 1){
         return;
