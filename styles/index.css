@@ -26,7 +26,7 @@ body{
     padding: 20px;
     margin: 3px;
     height: 170px;
-    width: 200px;
+    width: 300px;
 }
 
 .post h3{
@@ -47,13 +47,35 @@ body{
 
 label{
     display: block;
-
 }
-
-
 
 #authorDropDown{
     width: auto;
     margin-bottom: 20px;
     border-radius: 4px;
 }
+
+#pagination{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#pagination a{
+    color: black;
+    padding: 4px 8px;
+    display: inline;
+    border-radius: 4px;
+    border: 1px black solid;
+}
+#pagination a:hover{
+    background-color: black;
+    color: white;
+}
+
+#pagination p{
+    display: inline;
+    padding: 4px 8px;
+}
+
